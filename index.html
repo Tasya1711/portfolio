@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Наталія Бабич, Frontend розробниця | Сайти для бізнесу</title>
+<meta name="description" content="Створюю адаптивні, швидкі та сучасні сайти для малого бізнесу та спеціалістів. Індивідуальний код, базове SEO, доступні ціни." />
+<meta name="author" content="Наталія Бабич" />
+<link rel="canonical" href="https://tasyababic-portfolio.vercel.app/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Наталія Бабич - Frontend розробниця" />
+<meta property="og:description" content="Створюю адаптивні, швидкі та сучасні сайти для малого бізнесу та спеціалістів." />
+<meta property="og:image" content="images/portfolio-photo1.jpeg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/header.css" />
+<link rel="stylesheet" href="css/hero.css" />
+<link rel="stylesheet" href="css/projects.css" />
+<link rel="stylesheet" href="css/services.css" />
+<link rel="stylesheet" href="css/process.css" />
+<link rel="stylesheet" href="css/about.css" />
+<link rel="stylesheet" href="css/skills.css" />
+<link rel="stylesheet" href="css/footer.css" />
+
+<script>
+window.PAGE_I18N = {
+  "__title": { uk: "Наталія Бабич - Frontend розробниця | Сайти для бізнесу", en: "Natalie Babych - Frontend Developer | Websites for Business" },
+  "__description": { uk: "Створюю адаптивні, швидкі та сучасні сайти для малого бізнесу та спеціалістів. Індивідуальний код, базове SEO, доступні ціни.", en: "I build adaptive, fast and modern websites for small businesses and specialists. Custom code, basic SEO, accessible pricing." },
+
+  "hero.eyebrow": { uk: "Frontend developer", en: "Frontend developer" },
+  "hero.name.first": { uk: "Бабич", en: "Babych" },
+  "hero.name.second": { uk: "Наталія", en: "Natalie" },
+  "hero.tagline": { uk: "Створюю сайти з нуля: адаптивні, швидкі й сучасні.", en: "I build websites from scratch: adaptive, fast and modern." },
+  "hero.cta.projects": { uk: "Переглянути проєкти", en: "View projects" },
+  "hero.cta.contact": { uk: "Зв’язатися", en: "Get in touch" },
+
+  "projects.tag": { uk: "Проєкти", en: "Projects" },
+  "projects.title": { uk: "Обрані роботи", en: "Selected work" },
+  "projects.info": { uk: "Реальні сайти для реального бізнесу: від ідеї до запуску.", en: "Real websites for real businesses: from idea to launch." },
+  "projects.learnMore": { uk: "Дізнатися більше", en: "Learn more" },
+
+  "project.tennis.desc": { uk: "Онлайн-бронювання тенісних кортів з миттєвим підтвердженням і оплатою.", en: "Online tennis court booking with instant confirmation and payment." },
+  "project.chelona.desc": { uk: "Бренд-сайт ручної кераміки з каталогом виробів і м’якою естетикою.", en: "A brand site for handmade ceramics with a soft aesthetic and product catalogue." },
+  "project.skia.desc": { uk: "Цифрове меню ресторану високої кухні з акцентом на подачу страв.", en: "A digital menu for a fine-dining restaurant, focused on presenting each dish." },
+  "project.vivienne.desc": { uk: "Портфоліо-сайт фотографки з портретною та lifestyle зйомкою.", en: "A portfolio site for a portrait and lifestyle photographer." },
+
+  "services.tag": { uk: "Послуги", en: "Services" },
+  "services.title": { uk: "Послуги та ціни", en: "Services & pricing" },
+  "services.subtitle": { uk: "Прозорі пакети без прихованих платежів.", en: "Clear packages, no hidden fees." },
+
+  "service.landing.name": { uk: "Лендінг", en: "Landing page" },
+  "service.landing.for": { uk: "Для спеціалістів з однією пропозицією", en: "For specialists with a single offer" },
+  "service.landing.f1": { uk: "До 5 секцій", en: "Up to 5 sections" },
+  "service.landing.f2": { uk: "Адаптив під усі екрани", en: "Fully responsive" },
+  "service.landing.f3": { uk: "1 раунд правок", en: "1 revision round" },
+
+  "service.business.name": { uk: "Сайт для малого бізнесу", en: "Small business website" },
+  "service.business.for": { uk: "Для майстрів, кафе, локального бізнесу", en: "For studios, cafés and local businesses" },
+  "service.business.f1": { uk: "2–3 сторінки", en: "2–3 pages" },
+  "service.business.f2": { uk: "Форма + інтеграція", en: "Form + integration" },
+  "service.business.f3": { uk: "1–2 раунди правок", en: "1–2 revision rounds" },
+
+  "service.multipage.name": { uk: "Багатосторінковий сайт", en: "Multi-page website" },
+  "service.multipage.for": { uk: "Для бізнесу, що росте", en: "For a growing business" },
+  "service.multipage.f1": { uk: "4–6 сторінок", en: "4–6 pages" },
+  "service.multipage.f2": { uk: "Розширена структура", en: "Expanded structure" },
+  "service.multipage.f3": { uk: "2 раунди правок", en: "2 revision rounds" },
+
+  "service.cta": { uk: "Замовити", en: "Order" },
+  "service.priceFrom": { uk: "від", en: "from" },
+  "service.currency": { uk: "грн", en: "UAH" },
+
+  "process.tag": { uk: "Процес", en: "Process" },
+  "process.title": { uk: "Як ми працюємо", en: "How we work" },
+
+  "process.1.title": { uk: "Звернення", en: "Inquiry" },
+  "process.1.summary": { uk: "Пишете в Direct із коротким описом задачі.", en: "You write in with a short description of your project." },
+  "process.1.tag": { uk: "З ЧОГО ПОЧИНАЄМО", en: "WHERE WE START" },
+  "process.1.p1": { uk: "Опис бізнесу і задачі", en: "Business and task overview" },
+  "process.1.p2": { uk: "Перші уточнення", en: "First clarifying questions" },
+
+  "process.2.title": { uk: "ТЗ і оцінка", en: "Scope & quote" },
+  "process.2.summary": { uk: "Узгоджуємо обсяг, ціну та терміни письмово.", en: "We agree on scope, price and timeline in writing." },
+  "process.2.tag": { uk: "СПІЛЬНА ТОЧКА ВІДЛІКУ", en: "A SHARED STARTING POINT" },
+  "process.2.p1": { uk: "Технічне завдання", en: "Written scope of work" },
+  "process.2.p2": { uk: "Фіксована ціна й термін", en: "Fixed price and deadline" },
+
+  "process.3.title": { uk: "Розробка", en: "Design & build" },
+  "process.3.summary": { uk: "Верстаю сайт: структура, адаптив, базове SEO.", en: "I build the site: structure, responsive layout, basic SEO." },
+  "process.3.tag": { uk: "ДЕ НАРОДЖУЄТЬСЯ САЙТ", en: "WHERE THE SITE TAKES SHAPE" },
+  "process.3.p1": { uk: "Індивідуальний код", en: "Custom-built code" },
+  "process.3.p2": { uk: "Адаптація під усі екрани", en: "Adapted for every screen" },
+
+  "process.4.title": { uk: "Тестування", en: "Testing" },
+  "process.4.summary": { uk: "Перевіряю сайт і вношу узгоджені правки.", en: "I test the site and apply agreed revisions." },
+  "process.4.tag": { uk: "ПЕРЕД ЗАПУСКОМ", en: "BEFORE LAUNCH" },
+  "process.4.p1": { uk: "Кросбраузерна перевірка", en: "Cross-browser testing" },
+  "process.4.p2": { uk: "Раунд правок у межах ТЗ", en: "Revisions within scope" },
+
+  "process.5.title": { uk: "Запуск", en: "Launch" },
+  "process.5.summary": { uk: "Деплою сайт і передаю всі доступи.", en: "I deploy the site and hand over full access." },
+  "process.5.tag": { uk: "ГОТОВО ДО РОБОТИ", en: "READY TO GO" },
+  "process.5.p1": { uk: "Підключення домену", en: "Domain connection" },
+  "process.5.p2": { uk: "Готовий сайт у вас на руках", en: "A finished site, fully yours" },
+
+  "about.tag": { uk: "Про мене", en: "About" },
+  "about.text": {
+    uk: "Я створюю сайти, які виглядають професійно і працюють бездоганно. Кожен проєкт починається з розуміння вашого бізнесу та аудиторії, тому результат відповідає саме вашим цілям, а не шаблону. Для мене важливий не лише зовнішній вигляд, а й те, наскільки зручно людям користуватися сайтом на телефоні, планшеті чи комп’ютері. Ви отримуєте сайт, який відображає рівень вашого бізнесу і викликає довіру з першого погляду.",
+    en: "I build websites that look professional and work flawlessly. Every project starts with understanding your business and your audience, so the result matches your goals rather than a template. What matters to me is not only how a website looks, but how comfortably people can use it on a phone, tablet or desktop. You get a website that reflects the level of your business and builds trust from the very first look."
+  },
+  "about.cta": { uk: "Зв’язатися зі мною", en: "Get in touch" },
+
+  "skills.headline": { uk: "Експертиза", en: "Expertise" },
+
+  "skill.frontend.name": { uk: "Frontend розробка", en: "Frontend development" },
+  "skill.frontend.desc": { uk: "Швидкі, адаптивні сайти з увагою до кожної деталі інтерфейсу.", en: "Fast, responsive websites with attention to every interface detail." },
+  "skill.frontend.t1": { uk: "Landing Page", en: "Landing Page" },
+  "skill.frontend.t2": { uk: "Багатосторінковий сайт", en: "Multi-page site" },
+  "skill.frontend.t3": { uk: "Адаптивність", en: "Responsive design" },
+
+  "skill.backend.name": { uk: "Backend основи", en: "Backend essentials" },
+  "skill.backend.desc": { uk: "Проста серверна логіка для форм, оплат та особистих кабінетів.", en: "Simple server-side logic for forms, payments and user accounts." },
+  "skill.backend.t1": { uk: "Оплата", en: "Payments" },
+  "skill.backend.t2": { uk: "Авторизація", en: "Authentication" },
+  "skill.backend.t3": { uk: "Бази даних", en: "Data storage" },
+
+  "skill.seo.name": { uk: "SEO та швидкодія", en: "SEO & performance" },
+  "skill.seo.desc": { uk: "Базове SEO і оптимізація швидкодії для кращої видимості сайту.", en: "Basic SEO and performance optimisation for better visibility." },
+  "skill.seo.t1": { uk: "Базове SEO", en: "Basic SEO" },
+  "skill.seo.t2": { uk: "Оптимізація швидкодії", en: "Speed optimisation" },
+
+  "skill.design.name": { uk: "Візуальна структура", en: "Visual direction" },
+  "skill.design.desc": { uk: "Продумана структура та стиль сайту без потреби в окремому макеті.", en: "A considered layout and style, no separate design file required." },
+  "skill.design.t1": { uk: "UI/UX", en: "UI/UX" },
+  "skill.design.t2": { uk: "Адаптивний дизайн", en: "Responsive design" },
+
+  "skill.cta": { uk: "Детальніше", en: "Explore" }
+};
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Наталія Бабич, Frontend розробниця",
+  "url": "https://tasyababic-portfolio.vercel.app/",
+  "image": "https://tasyababic-portfolio.vercel.app/images/portfolio-photo1.jpeg",
+  "description": "Розробка адаптивних, швидких сайтів для малого бізнесу та спеціалістів.",
+  "email": "tasyababic@gmail.com",
+  "areaServed": "UA",
+  "founder": {
+    "@type": "Person",
+    "name": "Наталія Бабич"
+  },
+  "sameAs": [
+    "https://t.me/sayiiitttt",
+    "https://instagram.com/sayiiitttt"
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="#top" class="header__logo" data-i18n="brand.logo">Н. Бабич</a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li><a class="header__nav-link" data-i18n="nav.projects" href="#projects">Проєкти</a></li>
+        <li><a class="header__nav-link" data-i18n="nav.services" href="#services">Послуги</a></li>
+        <li><a class="header__nav-link" data-i18n="nav.process" href="#process">Процес</a></li>
+        <li><a class="header__nav-link" data-i18n="nav.about" href="#about">Про мене</a></li>
+        <li><a class="header__nav-link" data-i18n="nav.skills" href="#skills">Навички</a></li>
+        <li><a class="header__nav-link" data-i18n="nav.contact" href="#contact">Контакти</a></li>
+      </ul>
+      <div class="header__actions">
+        <div class="lang-switch">
+          <button class="lang-switch__btn" data-lang="uk">UA</button>
+          <span class="lang-switch__divider">/</span>
+          <button class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <button class="header__burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Frontend developer</p>
+        <h1 class="hero__name">
+          <span data-i18n="hero.name.first">Бабич</span>
+          <span data-i18n="hero.name.second">Наталія</span>
+        </h1>
+        <p class="hero__tagline" data-i18n="hero.tagline">Створюю сайти з нуля: адаптивні, швидкі й сучасні.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projects" data-i18n="hero.cta.projects">Переглянути проєкти</a>
+          <a class="btn btn--ghost" href="#contact" data-i18n="hero.cta.contact">Зв&rsquo;язатися</a>
+        </div>
+      </div>
+      <div class="hero__photos">
+        <div class="hero__photo hero__photo--one">
+          <img src="images/portfolio-photo1.jpeg" alt="Наталія Бабич, портрет" />
+        </div>
+        <div class="hero__photo hero__photo--two">
+          <img src="images/portfolio-photo2.jpeg" alt="Наталія Бабич" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section projects" id="projects">
+    <div class="container projects__head">
+      <p class="section-tag" data-i18n="projects.tag">Проєкти</p>
+      <h2 class="section-title" data-i18n="projects.title">Обрані роботи</h2>
+    </div>
+
+    <div class="projects__row">
+      <div class="projects__info">
+        <p class="projects__info-text" data-i18n="projects.info">Реальні сайти для реального бізнесу: від ідеї до запуску.</p>
+      </div>
+
+      <div class="projects__track hide-scrollbar">
+
+        <a class="project-card" href="project/tennis-court-reservation.html">
+          <div class="project-card__frame">
+            <span class="project-card__num">01</span>
+            <img src="projects/tennis-reservation/image-t1.png" alt="превʼю проєкту Tennis Court Reservation" loading="lazy" />
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__name">Tennis Court Reservation</h3>
+            <p class="project-card__desc" data-i18n="project.tennis.desc">Онлайн-бронювання тенісних кортів з миттєвим підтвердженням і оплатою.</p>
+            <span class="project-card__link" data-i18n="projects.learnMore">Дізнатися більше
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="project-card" href="project/chelona.html">
+          <div class="project-card__frame">
+            <span class="project-card__num">02</span>
+            <img src="projects/Chelona/image-c1.jpg" alt="превʼю проєкту Chelóna" loading="lazy" />
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__name">Chel&oacute;na</h3>
+            <p class="project-card__desc" data-i18n="project.chelona.desc">Бренд-сайт ручної кераміки з каталогом виробів і м&rsquo;якою естетикою.</p>
+            <span class="project-card__link" data-i18n="projects.learnMore">Дізнатися більше
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="project-card" href="project/skia.html">
+          <div class="project-card__frame">
+            <span class="project-card__num">03</span>
+            <img src="projects/Skia/image-s1.jpg" alt="превʼю проєкту SKIA" loading="lazy" />
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__name">SKIA</h3>
+            <p class="project-card__desc" data-i18n="project.skia.desc">Цифрове меню ресторану високої кухні з акцентом на подачу страв.</p>
+            <span class="project-card__link" data-i18n="projects.learnMore">Дізнатися більше
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="project-card" href="project/vivienne-beaumont.html">
+          <div class="project-card__frame">
+            <span class="project-card__num">04</span>
+            <img src="projects/Vivienne%20Beaumont/image-v1.jpg" alt="превʼю проєкту Vivienne Beaumont" loading="lazy" />
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__name">Vivienne Beaumont</h3>
+            <p class="project-card__desc" data-i18n="project.vivienne.desc">Портфоліо-сайт фотографки з портретною та lifestyle зйомкою.</p>
+            <span class="project-card__link" data-i18n="projects.learnMore">Дізнатися більше
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="container">
+      <p class="section-tag" data-i18n="services.tag">Послуги</p>
+      <h2 class="section-title" data-i18n="services.title">Послуги та ціни</h2>
+      <p class="projects__info-text" style="margin-top:14px;" data-i18n="services.subtitle">Прозорі пакети без прихованих платежів.</p>
+
+      <div class="services__grid" style="margin-top:48px;">
+
+        <div class="service-card">
+          <div class="service-card__top">
+            <h3 class="service-card__name" data-i18n="service.landing.name">Лендінг</h3>
+            <p class="service-card__for" data-i18n="service.landing.for">Для спеціалістів з однією пропозицією</p>
+            <p class="service-card__price">4 500 <span data-i18n="service.currency">грн</span></p>
+          </div>
+          <ul class="service-card__list">
+            <li data-i18n="service.landing.f1">До 5 секцій</li>
+            <li data-i18n="service.landing.f2">Адаптив під усі екрани</li>
+            <li data-i18n="service.landing.f3">1 раунд правок</li>
+          </ul>
+          <a class="service-card__cta" href="#contact">
+            <span data-i18n="service.cta">Замовити</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__top">
+            <h3 class="service-card__name" data-i18n="service.business.name">Сайт для малого бізнесу</h3>
+            <p class="service-card__for" data-i18n="service.business.for">Для майстрів, кафе, локального бізнесу</p>
+            <p class="service-card__price">7 500 <span data-i18n="service.currency">грн</span></p>
+          </div>
+          <ul class="service-card__list">
+            <li data-i18n="service.business.f1">2&ndash;3 сторінки</li>
+            <li data-i18n="service.business.f2">Форма + інтеграція</li>
+            <li data-i18n="service.business.f3">1&ndash;2 раунди правок</li>
+          </ul>
+          <a class="service-card__cta" href="#contact">
+            <span data-i18n="service.cta">Замовити</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__top">
+            <h3 class="service-card__name" data-i18n="service.multipage.name">Багатосторінковий сайт</h3>
+            <p class="service-card__for" data-i18n="service.multipage.for">Для бізнесу, що росте</p>
+            <p class="service-card__price">11 500 <span data-i18n="service.currency">грн</span></p>
+          </div>
+          <ul class="service-card__list">
+            <li data-i18n="service.multipage.f1">4&ndash;6 сторінок</li>
+            <li data-i18n="service.multipage.f2">Розширена структура</li>
+            <li data-i18n="service.multipage.f3">2 раунди правок</li>
+          </ul>
+          <a class="service-card__cta" href="#contact">
+            <span data-i18n="service.cta">Замовити</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section process" id="process">
+    <div class="container">
+      <p class="section-tag" data-i18n="process.tag">Процес</p>
+      <h2 class="section-title" style="margin-bottom:48px;" data-i18n="process.title">Як ми працюємо</h2>
+
+      <div class="process__list">
+
+        <div class="process-item">
+          <div class="process-item__row">
+            <span class="process-item__num">01</span>
+            <h3 class="process-item__title" data-i18n="process.1.title">Звернення</h3>
+            <p class="process-item__summary" data-i18n="process.1.summary">Пишете в Direct із коротким описом задачі.</p>
+          </div>
+          <div class="process-item__extra">
+            <span></span>
+            <p class="process-item__tag" data-i18n="process.1.tag">З ЧОГО ПОЧИНАЄМО</p>
+            <span></span>
+          </div>
+          <div class="process-item__extra">
+            <span></span>
+            <ul class="process-item__points">
+              <li data-i18n="process.1.p1">Опис бізнесу і задачі</li>
+              <li data-i18n="process.1.p2">Перші уточнення</li>
+            </ul>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <div class="process-item__row">
+            <span class="process-item__num">02</span>
+            <h3 class="process-item__title" data-i18n="process.2.title">ТЗ і оцінка</h3>
+            <p class="process-item__summary" data-i18n="process.2.summary">Узгоджуємо обсяг, ціну та терміни письмово.</p>
+          </div>
+          <div class="process-item__extra">
+            <span></span>
+            <p class="process-item__tag" data-i18n="process.2.tag">СПІЛЬНА ТОЧКА ВІДЛІКУ</p>
+            <span></span>
+          </div>
+          <div class="process-item__extra">
+            <span></span>
+            <ul class="process-item__points">
+              <li data-i18n="process.2.p1">Технічне завдання</li>
+              <li data-i18n="process.2.p2">Фіксована ціна й термін</li>
+            </ul>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <div class="process-item__row">
+            <span class="process-item__num">03</span>
+            <h3 class="process-item__title" data-i18n="process.3.title">Розробка</h3>
+            <p class="process-item__summary" data-i18n="process.3.summary">Верстаю сайт: структура, адаптив, базове SEO.</p>
+          </div>
+          <div class="process-item__extra">
+            <span></span>
+            <p class="process-item__tag" data-i18n="process.3.tag">ДЕ НАРОДЖУЄТЬСЯ САЙТ</p>
+            <span></span>
+          </div>
+          <div class="process-item__extra">
+            <span></span>
+            <ul class="process-item__points">
+              <li data-i18n="process.3.p1">Індивідуальний код</li>
+              <li data-i18n="process.3.p2">Адаптація під усі екрани</li>
+            </ul>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <div class="process-item__row">
+            <span class="process-item__num">04</span>
+            <h3 class="process-item__title" data-i18n="process.4.title">Тестування</h3>
+            <p class="process-item__summary" data-i18n="process.4.summary">Перевіряю сайт і вношу узгоджені правки.</p>
+          </div>
+          <div class="process-item__extra">
+            <span></span>
+            <p class="process-item__tag" data-i18n="process.4.tag">ПЕРЕД ЗАПУСКОМ</p>
+            <span></span>
+          </div>
+          <div class="process-item__extra">
+            <span></span>
+            <ul class="process-item__points">
+              <li data-i18n="process.4.p1">Кросбраузерна перевірка</li>
+              <li data-i18n="process.4.p2">Раунд правок у межах ТЗ</li>
+            </ul>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <div class="process-item__row">
+            <span class="process-item__num">05</span>
+            <h3 class="process-item__title" data-i18n="process.5.title">Запуск</h3>
+            <p class="process-item__summary" data-i18n="process.5.summary">Деплою сайт і передаю всі доступи.</p>
+          </div>
+          <div class="process-item__extra">
+            <span></span>
+            <p class="process-item__tag" data-i18n="process.5.tag">ГОТОВО ДО РОБОТИ</p>
+            <span></span>
+          </div>
+          <div class="process-item__extra">
+            <span></span>
+            <ul class="process-item__points">
+              <li data-i18n="process.5.p1">Підключення домену</li>
+              <li data-i18n="process.5.p2">Готовий сайт у вас на руках</li>
+            </ul>
+            <span></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <div class="about__photo">
+        <img src="images/about-me-photo.jpeg" alt="Наталія Бабич" />
+      </div>
+      <div>
+        <p class="section-tag" data-i18n="about.tag">Про мене</p>
+        <p class="about__text" data-i18n="about.text">Я створюю сайти, які виглядають професійно і працюють бездоганно. Кожен проєкт починається з розуміння вашого бізнесу та аудиторії, тому результат відповідає саме вашим цілям, а не шаблону. Для мене важливий не лише зовнішній вигляд, а й те, наскільки зручно людям користуватися сайтом на телефоні, планшеті чи комп&rsquo;ютері. Ви отримуєте сайт, який відображає рівень вашого бізнесу і викликає довіру з першого погляду.</p>
+        <a class="btn btn--primary about__cta" href="#contact" data-i18n="about.cta">Зв&rsquo;язатися зі мною</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section skills" id="skills">
+    <div class="container">
+      <h2 class="skills__headline" data-i18n="skills.headline">Експертиза</h2>
+
+      <div class="skills__grid">
+
+        <div class="skill-card">
+          <h3 class="skill-card__name" data-i18n="skill.frontend.name">Frontend розробка</h3>
+          <p class="skill-card__desc" data-i18n="skill.frontend.desc">Швидкі, адаптивні сайти з увагою до кожної деталі інтерфейсу.</p>
+          <div class="skill-card__tags">
+            <span class="skill-card__tag" data-i18n="skill.frontend.t1">Landing Page</span>
+            <span class="skill-card__tag" data-i18n="skill.frontend.t2">Багатосторінковий сайт</span>
+            <span class="skill-card__tag" data-i18n="skill.frontend.t3">Адаптивність</span>
+          </div>
+          <a class="skill-card__cta" href="#contact">
+            <span data-i18n="skill.cta">Детальніше</span>
+            <span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card__name" data-i18n="skill.backend.name">Backend основи</h3>
+          <p class="skill-card__desc" data-i18n="skill.backend.desc">Проста серверна логіка для форм, оплат та особистих кабінетів.</p>
+          <div class="skill-card__tags">
+            <span class="skill-card__tag" data-i18n="skill.backend.t1">Оплата</span>
+            <span class="skill-card__tag" data-i18n="skill.backend.t2">Авторизація</span>
+            <span class="skill-card__tag" data-i18n="skill.backend.t3">Бази даних</span>
+          </div>
+          <a class="skill-card__cta" href="#contact">
+            <span data-i18n="skill.cta">Детальніше</span>
+            <span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card__name" data-i18n="skill.seo.name">SEO та швидкодія</h3>
+          <p class="skill-card__desc" data-i18n="skill.seo.desc">Базове SEO і оптимізація швидкодії для кращої видимості сайту.</p>
+          <div class="skill-card__tags">
+            <span class="skill-card__tag" data-i18n="skill.seo.t1">Базове SEO</span>
+            <span class="skill-card__tag" data-i18n="skill.seo.t2">Оптимізація швидкодії</span>
+          </div>
+          <a class="skill-card__cta" href="#contact">
+            <span data-i18n="skill.cta">Детальніше</span>
+            <span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+
+        <div class="skill-card">
+          <h3 class="skill-card__name" data-i18n="skill.design.name">Візуальна структура</h3>
+          <p class="skill-card__desc" data-i18n="skill.design.desc">Продумана структура та стиль сайту без потреби в окремому макеті.</p>
+          <div class="skill-card__tags">
+            <span class="skill-card__tag" data-i18n="skill.design.t1">UI/UX</span>
+            <span class="skill-card__tag" data-i18n="skill.design.t2">Адаптивний дизайн</span>
+          </div>
+          <a class="skill-card__cta" href="#contact">
+            <span data-i18n="skill.cta">Детальніше</span>
+            <span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer__grid">
+    <div class="footer__content">
+      <div>
+        <h2 class="footer__heading" data-i18n="footer.heading">Контакти</h2>
+        <p class="footer__lead" data-i18n="footer.lead">Маєте ідею для сайту? Напишіть, і обговоримо деталі.</p>
+
+        <div class="footer__links">
+          <div class="footer__link-row">
+            <span class="footer__link-label" data-i18n="footer.label.email">Email</span>
+            <a class="footer__link-value" href="mailto:tasyababic@gmail.com">tasyababic@gmail.com</a>
+          </div>
+          <div class="footer__link-row">
+            <span class="footer__link-label" data-i18n="footer.label.telegram">Telegram</span>
+            <a class="footer__link-value" href="https://t.me/sayiiitttt" target="_blank" rel="noopener">@sayiiitttt</a>
+          </div>
+          <div class="footer__link-row">
+            <span class="footer__link-label" data-i18n="footer.label.instagram">Instagram</span>
+            <a class="footer__link-value" href="https://instagram.com/sayiiitttt" target="_blank" rel="noopener">@sayiiitttt</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span data-i18n="footer.rights">&copy; 2026 Наталія Бабич</span>
+        <span data-i18n="footer.closing">Створімо щось разом</span>
+      </div>
+    </div>
+    <div class="footer__image">
+      <img src="images/7-img-right.jpeg" alt="" />
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/process.js"></script>
+</body>
+</html>

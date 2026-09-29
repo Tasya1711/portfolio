@@ -1,0 +1,18 @@
+.DS_Store
+CLAUDE.md
+AGENTS.md
+.claude/
+ТЗ_frontend_розробника.pdf
+попередні-розмови.pages
+projects/**/*.zip
+
+# design references (mockups studied for layout/animation, not site assets)
+images/1-img.jpeg
+images/2-img.jpeg
+images/2-img-page.jpeg
+images/4-img.jpeg
+images/6-img.jpeg
+images/6-img-content.jpeg
+images/7-img.jpeg
+images/3-animation-price.mov
+images/4-animation.mov
