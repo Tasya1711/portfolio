@@ -63,7 +63,7 @@ p {
 }
 
 .section {
-  padding: 120px 0;
+  padding: 88px 0;
 }
 
 .section-tag {
@@ -117,6 +117,6 @@ p {
 
 @media (max-width: 640px) {
   .section {
-    padding: 72px 0;
+    padding: 56px 0;
   }
 }

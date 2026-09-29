@@ -14,11 +14,13 @@
   if (burger && navList) {
     burger.addEventListener("click", function () {
       navList.classList.toggle("is-open");
+      burger.classList.toggle("is-open");
     });
 
     navList.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         navList.classList.remove("is-open");
+        burger.classList.remove("is-open");
       });
     });
   }

@@ -20,7 +20,16 @@
     "footer.label.email": { uk: "Email", en: "Email" },
     "footer.label.telegram": { uk: "Telegram", en: "Telegram" },
     "footer.label.instagram": { uk: "Instagram", en: "Instagram" },
+    "footer.label.location": { uk: "Локація", en: "Location" },
+    "footer.location": { uk: "Ужгород, Україна", en: "Uzhhorod, Ukraine" },
+    "footer.label.availability": { uk: "Доступність", en: "Availability" },
+    "footer.availability": {
+      uk: "На зв’язку 24/7 з понеділка по суботу. У неділю не працюю.",
+      en: "Available 24/7, Monday through Saturday. Not working on Sundays.",
+    },
     "footer.rights": { uk: "© 2026 Наталія Бабич", en: "© 2026 Natalie Babych" },
+
+    "contact.title": { uk: "Як вам зручніше написати?", en: "How would you like to reach me?" },
 
     "project.back": { uk: "Усі проєкти", en: "All projects" },
     "project.visit": { uk: "Переглянути сайт", en: "Visit website" },

@@ -1,29 +1,29 @@
 (function () {
-  var stage = document.querySelector(".project-preview__stage");
-  var device = document.getElementById("previewDevice");
-  var iframe = device ? device.querySelector("iframe") : null;
+  var stage = document.querySelector(".project-preview");
+  var frame = document.getElementById("previewDevice");
   var buttons = document.querySelectorAll(".device-switch__btn");
+  var SCROLLBAR_GUTTER = 20;
+  var NATURAL_WIDTH = { desktop: 1440, tablet: 834, mobile: 390 };
 
-  if (!stage || !device || !iframe) return;
+  if (!stage || !frame) return;
 
-  function applyHeight(mode) {
-    var h = device.getAttribute("data-" + mode + "-height") || "3200";
-    iframe.style.height = h + "px";
-  }
+  function layout() {
+    var device = frame.getAttribute("data-device");
+    var naturalWidth = NATURAL_WIDTH[device];
 
-  function applyZoom() {
-    var padding = 56;
-    var available = stage.clientWidth - padding;
-    var deviceWidth = device.getBoundingClientRect().width / (device.style.zoom || 1);
-    var natural = { desktop: 1440, tablet: 834, mobile: 390 }[device.getAttribute("data-device")];
-    var scale = Math.min(1, available / natural);
-    device.style.zoom = scale;
+    var stagePadding = 56;
+    var availableWidth = stage.clientWidth - stagePadding;
+    var availableHeight = stage.clientHeight - stagePadding;
+    var scale = Math.min(1, availableWidth / naturalWidth);
+
+    frame.style.width = naturalWidth - SCROLLBAR_GUTTER + "px";
+    frame.style.height = availableHeight / scale + "px";
+    frame.style.transform = "scale(" + scale + ")";
   }
 
   function setDevice(mode) {
-    device.setAttribute("data-device", mode);
-    applyHeight(mode);
-    applyZoom();
+    frame.setAttribute("data-device", mode);
+    layout();
 
     buttons.forEach(function (btn) {
       btn.classList.toggle("is-active", btn.getAttribute("data-device") === mode);
@@ -36,7 +36,7 @@
     });
   });
 
-  window.addEventListener("resize", applyZoom);
+  window.addEventListener("resize", layout);
 
   setDevice("desktop");
 })();

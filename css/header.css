@@ -31,23 +31,37 @@
 .header__nav {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 18px;
 }
 
 .header__nav-list {
+  position: fixed;
+  top: 76px;
+  left: 0;
+  width: 100%;
   display: flex;
-  gap: 28px;
+  flex-direction: column;
+  gap: 0;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
 }
 
-.header__nav-link {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--color-text-soft);
-  transition: color 0.25s var(--ease);
+.header__nav-list.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
-.header__nav-link:hover {
-  color: var(--color-text);
+.header__nav-list .header__nav-link {
+  display: block;
+  padding: 16px var(--gutter);
+  border-top: 1px solid var(--color-border);
+  width: 100%;
+  font-size: 16px;
 }
 
 .header__actions {
@@ -81,7 +95,7 @@
 }
 
 .header__burger {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -99,35 +113,14 @@
   transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
 }
 
-@media (max-width: 860px) {
-  .header__nav-list {
-    position: fixed;
-    top: 76px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    gap: 0;
-    background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
-    transform: translateY(-8px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
-  }
+.header__burger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
 
-  .header__nav-list.is-open {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
+.header__burger.is-open span:nth-child(2) {
+  opacity: 0;
+}
 
-  .header__nav-list .header__nav-link {
-    padding: 16px var(--gutter);
-    border-top: 1px solid var(--color-border);
-    width: 100%;
-  }
-
-  .header__burger {
-    display: flex;
-  }
+.header__burger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }

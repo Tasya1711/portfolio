@@ -132,57 +132,36 @@
 
 .project-preview {
   position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   background: #e9e7db;
-}
-
-.project-preview__stage {
   display: flex;
+  align-items: flex-start;
   justify-content: center;
   padding: 28px;
 }
 
-.project-preview__device {
-  width: 1440px;
-  border-radius: 0;
-  overflow: hidden;
+.project-preview__frame {
+  position: relative;
+  flex-shrink: 0;
   background: #fff;
+  overflow: hidden;
   box-shadow: 0 30px 70px rgba(20, 20, 10, 0.16);
-  transition: width 0.45s var(--ease), border-radius 0.45s var(--ease), zoom 0.45s var(--ease);
+  transform-origin: top center;
+  transition: border-radius 0.45s var(--ease);
 }
 
-.project-preview__device[data-device="tablet"] {
-  width: 834px;
+.project-preview__frame[data-device="tablet"],
+.project-preview__frame[data-device="mobile"] {
   border-radius: 22px;
 }
 
-.project-preview__device[data-device="mobile"] {
-  width: 390px;
-  border-radius: 22px;
-}
-
-.project-preview__device iframe {
-  display: block;
-  width: 100%;
-  border: 0;
-}
-
-.project-preview__fallback {
+.project-preview__frame iframe {
   position: absolute;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px;
-}
-
-.project-preview__fallback p {
-  max-width: 360px;
-  font-size: 14px;
-  color: var(--color-text-soft);
-  line-height: 1.6;
+  top: 0;
+  left: 0;
+  width: calc(100% + 20px);
+  height: 100%;
+  border: 0;
 }
 
 @media (max-width: 900px) {

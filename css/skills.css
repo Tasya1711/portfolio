@@ -49,26 +49,6 @@
   background: rgba(247, 246, 241, 0.22);
 }
 
-.skill-card__cta {
-  margin-top: auto;
-  padding-top: 26px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.skill-card__cta span:last-child {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: rgba(247, 246, 241, 0.22);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 @media (max-width: 720px) {
   .skills__grid {
     grid-template-columns: 1fr;

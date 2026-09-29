@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="css/about.css" />
 <link rel="stylesheet" href="css/skills.css" />
 <link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/contact-modal.css" />
 
 <script>
 window.PAGE_I18N = {
@@ -42,8 +43,7 @@ window.PAGE_I18N = {
   "hero.cta.projects": { uk: "Переглянути проєкти", en: "View projects" },
   "hero.cta.contact": { uk: "Зв’язатися", en: "Get in touch" },
 
-  "projects.tag": { uk: "Проєкти", en: "Projects" },
-  "projects.title": { uk: "Обрані роботи", en: "Selected work" },
+  "projects.title": { uk: "РОБОТИ", en: "WORK" },
   "projects.info": { uk: "Реальні сайти для реального бізнесу: від ідеї до запуску.", en: "Real websites for real businesses: from idea to launch." },
   "projects.learnMore": { uk: "Дізнатися більше", en: "Learn more" },
 
@@ -54,7 +54,6 @@ window.PAGE_I18N = {
 
   "services.tag": { uk: "Послуги", en: "Services" },
   "services.title": { uk: "Послуги та ціни", en: "Services & pricing" },
-  "services.subtitle": { uk: "Прозорі пакети без прихованих платежів.", en: "Clear packages, no hidden fees." },
 
   "service.landing.name": { uk: "Лендінг", en: "Landing page" },
   "service.landing.for": { uk: "Для спеціалістів з однією пропозицією", en: "For specialists with a single offer" },
@@ -74,7 +73,7 @@ window.PAGE_I18N = {
   "service.multipage.f2": { uk: "Розширена структура", en: "Expanded structure" },
   "service.multipage.f3": { uk: "2 раунди правок", en: "2 revision rounds" },
 
-  "service.cta": { uk: "Замовити", en: "Order" },
+  "service.cta": { uk: "Написати", en: "Message me" },
   "service.priceFrom": { uk: "від", en: "from" },
   "service.currency": { uk: "грн", en: "UAH" },
 
@@ -82,7 +81,7 @@ window.PAGE_I18N = {
   "process.title": { uk: "Як ми працюємо", en: "How we work" },
 
   "process.1.title": { uk: "Звернення", en: "Inquiry" },
-  "process.1.summary": { uk: "Пишете в Direct із коротким описом задачі.", en: "You write in with a short description of your project." },
+  "process.1.summary": { uk: "Немає чіткої ідеї? Просто напишіть мені, і я допоможу її сформувати.", en: "No clear idea yet? Just reach out, and I’ll help you shape one." },
   "process.1.tag": { uk: "З ЧОГО ПОЧИНАЄМО", en: "WHERE WE START" },
   "process.1.p1": { uk: "Опис бізнесу і задачі", en: "Business and task overview" },
   "process.1.p2": { uk: "Перші уточнення", en: "First clarifying questions" },
@@ -118,7 +117,7 @@ window.PAGE_I18N = {
   },
   "about.cta": { uk: "Зв’язатися зі мною", en: "Get in touch" },
 
-  "skills.headline": { uk: "Експертиза", en: "Expertise" },
+  "skills.headline": { uk: "Можливості", en: "Capabilities" },
 
   "skill.frontend.name": { uk: "Frontend розробка", en: "Frontend development" },
   "skill.frontend.desc": { uk: "Швидкі, адаптивні сайти з увагою до кожної деталі інтерфейсу.", en: "Fast, responsive websites with attention to every interface detail." },
@@ -140,9 +139,7 @@ window.PAGE_I18N = {
   "skill.design.name": { uk: "Візуальна структура", en: "Visual direction" },
   "skill.design.desc": { uk: "Продумана структура та стиль сайту без потреби в окремому макеті.", en: "A considered layout and style, no separate design file required." },
   "skill.design.t1": { uk: "UI/UX", en: "UI/UX" },
-  "skill.design.t2": { uk: "Адаптивний дизайн", en: "Responsive design" },
-
-  "skill.cta": { uk: "Детальніше", en: "Explore" }
+  "skill.design.t2": { uk: "Адаптивний дизайн", en: "Responsive design" }
 };
 </script>
 
@@ -198,40 +195,41 @@ window.PAGE_I18N = {
 <main id="top">
 
   <section class="hero" id="hero">
-    <div class="container hero__inner">
-      <div class="hero__text">
-        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Frontend developer</p>
-        <h1 class="hero__name">
-          <span data-i18n="hero.name.first">Бабич</span>
-          <span data-i18n="hero.name.second">Наталія</span>
-        </h1>
-        <p class="hero__tagline" data-i18n="hero.tagline">Створюю сайти з нуля: адаптивні, швидкі й сучасні.</p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="#projects" data-i18n="hero.cta.projects">Переглянути проєкти</a>
-          <a class="btn btn--ghost" href="#contact" data-i18n="hero.cta.contact">Зв&rsquo;язатися</a>
-        </div>
-      </div>
-      <div class="hero__photos">
-        <div class="hero__photo hero__photo--one">
+    <div class="hero__photos">
+      <figure class="hero__photo-col">
+        <div class="hero__photo">
           <img src="images/portfolio-photo1.jpeg" alt="Наталія Бабич, портрет" />
         </div>
-        <div class="hero__photo hero__photo--two">
+        <figcaption class="hero__caption" data-i18n="hero.eyebrow">Frontend developer</figcaption>
+      </figure>
+      <figure class="hero__photo-col hero__photo-col--bleed">
+        <div class="hero__photo">
           <img src="images/portfolio-photo2.jpeg" alt="Наталія Бабич" />
         </div>
+        <figcaption class="hero__caption" data-i18n="hero.tagline">Створюю сайти з нуля: адаптивні, швидкі й сучасні.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container hero__bottom">
+      <h1 class="hero__name">
+        <span data-i18n="hero.name.first">Бабич</span>
+        <span data-i18n="hero.name.second">Наталія</span>
+      </h1>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#projects" data-i18n="hero.cta.projects">Переглянути проєкти</a>
+        <a class="btn btn--ghost" href="#contact" data-i18n="hero.cta.contact">Зв&rsquo;язатися</a>
       </div>
     </div>
   </section>
 
   <section class="section projects" id="projects">
     <div class="container projects__head">
-      <p class="section-tag" data-i18n="projects.tag">Проєкти</p>
-      <h2 class="section-title" data-i18n="projects.title">Обрані роботи</h2>
+      <h2 class="section-title" data-i18n="projects.title">РОБОТИ</h2>
+      <p class="projects__head-info" data-i18n="projects.info">Реальні сайти для реального бізнесу: від ідеї до запуску.</p>
     </div>
 
     <div class="projects__row">
-      <div class="projects__info">
-        <p class="projects__info-text" data-i18n="projects.info">Реальні сайти для реального бізнесу: від ідеї до запуску.</p>
-      </div>
+      <div class="projects__info" aria-hidden="true"></div>
 
       <div class="projects__track hide-scrollbar">
 
@@ -299,9 +297,8 @@ window.PAGE_I18N = {
     <div class="container">
       <p class="section-tag" data-i18n="services.tag">Послуги</p>
       <h2 class="section-title" data-i18n="services.title">Послуги та ціни</h2>
-      <p class="projects__info-text" style="margin-top:14px;" data-i18n="services.subtitle">Прозорі пакети без прихованих платежів.</p>
 
-      <div class="services__grid" style="margin-top:48px;">
+      <div class="services__grid" style="margin-top:40px;">
 
         <div class="service-card">
           <div class="service-card__top">
@@ -314,10 +311,10 @@ window.PAGE_I18N = {
             <li data-i18n="service.landing.f2">Адаптив під усі екрани</li>
             <li data-i18n="service.landing.f3">1 раунд правок</li>
           </ul>
-          <a class="service-card__cta" href="#contact">
-            <span data-i18n="service.cta">Замовити</span>
+          <button type="button" class="service-card__cta js-contact-trigger">
+            <span data-i18n="service.cta">Написати</span>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          </button>
         </div>
 
         <div class="service-card">
@@ -331,10 +328,10 @@ window.PAGE_I18N = {
             <li data-i18n="service.business.f2">Форма + інтеграція</li>
             <li data-i18n="service.business.f3">1&ndash;2 раунди правок</li>
           </ul>
-          <a class="service-card__cta" href="#contact">
-            <span data-i18n="service.cta">Замовити</span>
+          <button type="button" class="service-card__cta js-contact-trigger">
+            <span data-i18n="service.cta">Написати</span>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          </button>
         </div>
 
         <div class="service-card">
@@ -348,10 +345,10 @@ window.PAGE_I18N = {
             <li data-i18n="service.multipage.f2">Розширена структура</li>
             <li data-i18n="service.multipage.f3">2 раунди правок</li>
           </ul>
-          <a class="service-card__cta" href="#contact">
-            <span data-i18n="service.cta">Замовити</span>
+          <button type="button" class="service-card__cta js-contact-trigger">
+            <span data-i18n="service.cta">Написати</span>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          </button>
         </div>
 
       </div>
@@ -369,7 +366,7 @@ window.PAGE_I18N = {
           <div class="process-item__row">
             <span class="process-item__num">01</span>
             <h3 class="process-item__title" data-i18n="process.1.title">Звернення</h3>
-            <p class="process-item__summary" data-i18n="process.1.summary">Пишете в Direct із коротким описом задачі.</p>
+            <p class="process-item__summary" data-i18n="process.1.summary">Немає чіткої ідеї? Просто напишіть мені, і я допоможу її сформувати.</p>
           </div>
           <div class="process-item__extra">
             <span></span>
@@ -482,14 +479,14 @@ window.PAGE_I18N = {
       <div>
         <p class="section-tag" data-i18n="about.tag">Про мене</p>
         <p class="about__text" data-i18n="about.text">Я створюю сайти, які виглядають професійно і працюють бездоганно. Кожен проєкт починається з розуміння вашого бізнесу та аудиторії, тому результат відповідає саме вашим цілям, а не шаблону. Для мене важливий не лише зовнішній вигляд, а й те, наскільки зручно людям користуватися сайтом на телефоні, планшеті чи комп&rsquo;ютері. Ви отримуєте сайт, який відображає рівень вашого бізнесу і викликає довіру з першого погляду.</p>
-        <a class="btn btn--primary about__cta" href="#contact" data-i18n="about.cta">Зв&rsquo;язатися зі мною</a>
+        <button type="button" class="btn btn--primary about__cta js-contact-trigger" data-i18n="about.cta">Зв&rsquo;язатися зі мною</button>
       </div>
     </div>
   </section>
 
   <section class="section skills" id="skills">
     <div class="container">
-      <h2 class="skills__headline" data-i18n="skills.headline">Експертиза</h2>
+      <h2 class="skills__headline" data-i18n="skills.headline">Можливості</h2>
 
       <div class="skills__grid">
 
@@ -501,10 +498,6 @@ window.PAGE_I18N = {
             <span class="skill-card__tag" data-i18n="skill.frontend.t2">Багатосторінковий сайт</span>
             <span class="skill-card__tag" data-i18n="skill.frontend.t3">Адаптивність</span>
           </div>
-          <a class="skill-card__cta" href="#contact">
-            <span data-i18n="skill.cta">Детальніше</span>
-            <span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </a>
         </div>
 
         <div class="skill-card">
@@ -515,10 +508,6 @@ window.PAGE_I18N = {
             <span class="skill-card__tag" data-i18n="skill.backend.t2">Авторизація</span>
             <span class="skill-card__tag" data-i18n="skill.backend.t3">Бази даних</span>
           </div>
-          <a class="skill-card__cta" href="#contact">
-            <span data-i18n="skill.cta">Детальніше</span>
-            <span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </a>
         </div>
 
         <div class="skill-card">
@@ -528,10 +517,6 @@ window.PAGE_I18N = {
             <span class="skill-card__tag" data-i18n="skill.seo.t1">Базове SEO</span>
             <span class="skill-card__tag" data-i18n="skill.seo.t2">Оптимізація швидкодії</span>
           </div>
-          <a class="skill-card__cta" href="#contact">
-            <span data-i18n="skill.cta">Детальніше</span>
-            <span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </a>
         </div>
 
         <div class="skill-card">
@@ -541,10 +526,6 @@ window.PAGE_I18N = {
             <span class="skill-card__tag" data-i18n="skill.design.t1">UI/UX</span>
             <span class="skill-card__tag" data-i18n="skill.design.t2">Адаптивний дизайн</span>
           </div>
-          <a class="skill-card__cta" href="#contact">
-            <span data-i18n="skill.cta">Детальніше</span>
-            <span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </a>
         </div>
 
       </div>
@@ -555,40 +536,78 @@ window.PAGE_I18N = {
 
 <footer class="footer" id="contact">
   <div class="footer__grid">
-    <div class="footer__content">
-      <div>
-        <h2 class="footer__heading" data-i18n="footer.heading">Контакти</h2>
-        <p class="footer__lead" data-i18n="footer.lead">Маєте ідею для сайту? Напишіть, і обговоримо деталі.</p>
+    <div class="footer__intro">
+      <h2 class="footer__heading" data-i18n="footer.heading">Контакти</h2>
+      <p class="footer__lead" data-i18n="footer.lead">Маєте ідею для сайту? Напишіть, і обговоримо деталі.</p>
+      <p class="footer__closing" data-i18n="footer.closing">Створімо щось разом</p>
+    </div>
 
-        <div class="footer__links">
-          <div class="footer__link-row">
-            <span class="footer__link-label" data-i18n="footer.label.email">Email</span>
-            <a class="footer__link-value" href="mailto:tasyababic@gmail.com">tasyababic@gmail.com</a>
-          </div>
-          <div class="footer__link-row">
-            <span class="footer__link-label" data-i18n="footer.label.telegram">Telegram</span>
-            <a class="footer__link-value" href="https://t.me/sayiiitttt" target="_blank" rel="noopener">@sayiiitttt</a>
-          </div>
-          <div class="footer__link-row">
-            <span class="footer__link-label" data-i18n="footer.label.instagram">Instagram</span>
-            <a class="footer__link-value" href="https://instagram.com/sayiiitttt" target="_blank" rel="noopener">@sayiiitttt</a>
-          </div>
+    <div class="footer__details">
+      <div class="footer__links">
+        <div class="footer__link-row">
+          <span class="footer__link-label" data-i18n="footer.label.email">Email</span>
+          <a class="footer__link-value" href="mailto:tasyababic@gmail.com">tasyababic@gmail.com</a>
+        </div>
+        <div class="footer__link-row">
+          <span class="footer__link-label" data-i18n="footer.label.telegram">Telegram</span>
+          <a class="footer__link-value" href="https://t.me/sayiiitttt" target="_blank" rel="noopener">@sayiiitttt</a>
+        </div>
+        <div class="footer__link-row">
+          <span class="footer__link-label" data-i18n="footer.label.instagram">Instagram</span>
+          <a class="footer__link-value" href="https://instagram.com/sayiiitttt" target="_blank" rel="noopener">@sayiiitttt</a>
+        </div>
+        <div class="footer__link-row">
+          <span class="footer__link-label" data-i18n="footer.label.location">Локація</span>
+          <span class="footer__link-value footer__link-value--static" data-i18n="footer.location">Ужгород, Україна</span>
+        </div>
+        <div class="footer__link-row footer__link-row--last">
+          <span class="footer__link-label" data-i18n="footer.label.availability">Доступність</span>
+          <span class="footer__link-value footer__link-value--static footer__link-value--small" data-i18n="footer.availability">На зв&rsquo;язку 24/7 з понеділка по суботу. У неділю не працюю.</span>
         </div>
       </div>
 
       <div class="footer__bottom">
         <span data-i18n="footer.rights">&copy; 2026 Наталія Бабич</span>
-        <span data-i18n="footer.closing">Створімо щось разом</span>
       </div>
     </div>
+
     <div class="footer__image">
-      <img src="images/7-img-right.jpeg" alt="" />
+      <img src="images/7-img-right.png" alt="" />
     </div>
   </div>
 </footer>
 
+<div class="contact-modal" id="contactModal">
+  <div class="contact-modal__backdrop" data-contact-close></div>
+  <div class="contact-modal__card" role="dialog" aria-modal="true">
+    <button class="contact-modal__close" type="button" data-contact-close aria-label="Close">&times;</button>
+    <p class="contact-modal__title" data-i18n="contact.title">Як вам зручніше написати?</p>
+    <div class="contact-modal__options">
+      <a class="contact-modal__option" href="mailto:tasyababic@gmail.com">
+        <span class="contact-modal__option-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span>Email</span>
+      </a>
+      <a class="contact-modal__option" href="https://instagram.com/sayiiitttt" target="_blank" rel="noopener">
+        <span class="contact-modal__option-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+        </span>
+        <span>Instagram</span>
+      </a>
+      <a class="contact-modal__option" href="https://t.me/sayiiitttt" target="_blank" rel="noopener">
+        <span class="contact-modal__option-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 4L3 11.5l6 2M21 4l-3 16-8-6M21 4L9 13.5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span>Telegram</span>
+      </a>
+    </div>
+  </div>
+</div>
+
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 <script src="js/process.js"></script>
+<script src="js/contact-modal.js"></script>
 </body>
 </html>
