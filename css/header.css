@@ -4,15 +4,14 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(247, 246, 241, 0.82);
-  backdrop-filter: blur(10px);
+  background: rgba(247, 246, 241, 0);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s var(--ease);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.4s var(--ease);
 }
 
 .header.is-scrolled {
-  border-color: var(--color-border);
+  background: rgba(247, 246, 241, 0.7);
 }
 
 .header__inner {

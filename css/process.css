@@ -78,7 +78,7 @@
   font-weight: 600;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 640px) {
   .process-item__row,
   .process-item__extra {
     grid-template-columns: 44px 1fr;

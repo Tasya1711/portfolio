@@ -5,7 +5,7 @@
     "nav.services": { uk: "Послуги", en: "Services" },
     "nav.process": { uk: "Процес", en: "Process" },
     "nav.about": { uk: "Про мене", en: "About" },
-    "nav.skills": { uk: "Навички", en: "Skills" },
+    "nav.skills": { uk: "Можливості", en: "Capabilities" },
     "nav.contact": { uk: "Контакти", en: "Contact" },
 
     "footer.heading": { uk: "Контакти", en: "Contact" },
@@ -24,8 +24,8 @@
     "footer.location": { uk: "Ужгород, Україна", en: "Uzhhorod, Ukraine" },
     "footer.label.availability": { uk: "Доступність", en: "Availability" },
     "footer.availability": {
-      uk: "На зв’язку 24/7 з понеділка по суботу. У неділю не працюю.",
-      en: "Available 24/7, Monday through Saturday. Not working on Sundays.",
+      uk: "На зв’язку 24/7 з понеділка по суботу",
+      en: "Available 24/7, Monday through Saturday",
     },
     "footer.rights": { uk: "© 2026 Наталія Бабич", en: "© 2026 Natalie Babych" },
 

@@ -1,5 +1,5 @@
 .about {
-  min-height: 100vh;
+  padding: 72px 0 32px;
   display: flex;
   align-items: center;
 }
@@ -36,10 +36,9 @@
   margin-top: 36px;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 640px) {
   .about {
-    min-height: auto;
-    padding: 96px 0;
+    padding: 72px 0 32px;
   }
 
   .about__inner {
@@ -49,5 +48,34 @@
 
   .about__photo {
     max-width: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about__inner {
+    display: block;
+  }
+
+  .about__inner::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .about__photo {
+    float: left;
+    width: 42%;
+    max-width: none;
+    margin: 4px 16px 8px 0;
+  }
+
+  .about__text {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .about__cta {
+    margin-top: 20px;
+    clear: both;
   }
 }

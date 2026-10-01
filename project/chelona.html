@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <title>Chel&oacute;na, кейс проєкту | Наталія Бабич</title>
 <meta name="description" content="Бренд-сайт ручної кераміки Chel&oacute;na: каталог виробів, тепла мінімалістична естетика, інтерактивний перегляд у трьох розмірах екрана." />
 <meta name="author" content="Наталія Бабич" />
@@ -13,10 +13,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="../css/variables.css" />
-<link rel="stylesheet" href="../css/base.css" />
-<link rel="stylesheet" href="../css/header.css" />
-<link rel="stylesheet" href="../css/project-page.css" />
+<link rel="stylesheet" href="../css/variables.css?v=42" />
+<link rel="stylesheet" href="../css/base.css?v=42" />
+<link rel="stylesheet" href="../css/header.css?v=42" />
+<link rel="stylesheet" href="../css/footer.css?v=42" />
+<link rel="stylesheet" href="../css/project-page.css?v=42" />
 
 <script>
 window.PAGE_I18N = {
@@ -112,8 +113,52 @@ window.PAGE_I18N = {
   </div>
 </main>
 
+<footer class="footer" id="contact">
+  <div class="footer__grid">
+    <h2 class="footer__heading" data-i18n="footer.heading">Контакти</h2>
+
+    <div class="footer__intro">
+      <p class="footer__lead" data-i18n="footer.lead">Маєте ідею для сайту? Напишіть, і обговоримо деталі.</p>
+      <p class="footer__closing" data-i18n="footer.closing">Створімо щось разом</p>
+    </div>
+
+    <div class="footer__details">
+      <div class="footer__links">
+        <div class="footer__link-row">
+          <span class="footer__link-label" data-i18n="footer.label.email">Email</span>
+          <a class="footer__link-value" href="mailto:tasyababic@gmail.com">tasyababic@gmail.com</a>
+        </div>
+        <div class="footer__link-row">
+          <span class="footer__link-label" data-i18n="footer.label.telegram">Telegram</span>
+          <a class="footer__link-value" href="https://t.me/sayiiitttt" target="_blank" rel="noopener">@sayiiitttt</a>
+        </div>
+        <div class="footer__link-row">
+          <span class="footer__link-label" data-i18n="footer.label.instagram">Instagram</span>
+          <a class="footer__link-value" href="https://instagram.com/sayiiitttt" target="_blank" rel="noopener">@sayiiitttt</a>
+        </div>
+        <div class="footer__link-row">
+          <span class="footer__link-label" data-i18n="footer.label.location">Локація</span>
+          <span class="footer__link-value footer__link-value--static" data-i18n="footer.location">Ужгород, Україна</span>
+        </div>
+        <div class="footer__link-row footer__link-row--last">
+          <span class="footer__link-label" data-i18n="footer.label.availability">Доступність</span>
+          <span class="footer__link-value footer__link-value--static footer__link-value--small" data-i18n="footer.availability">На зв&rsquo;язку 24/7 з понеділка по суботу</span>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span data-i18n="footer.rights">&copy; 2026 Наталія Бабич</span>
+      </div>
+    </div>
+
+    <div class="footer__image">
+      <img src="../images/7-img-right.png" alt="" />
+    </div>
+  </div>
+</footer>
+
 <script src="../js/i18n.js"></script>
-<script src="../js/main.js"></script>
-<script src="../js/project-preview.js"></script>
+<script src="../js/main.js?v=42"></script>
+<script src="../js/project-preview.js?v=42"></script>
 </body>
 </html>

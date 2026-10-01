@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <title>Наталія Бабич, Frontend розробниця | Сайти для бізнесу</title>
 <meta name="description" content="Створюю адаптивні, швидкі та сучасні сайти для малого бізнесу та спеціалістів. Індивідуальний код, базове SEO, доступні ціни." />
 <meta name="author" content="Наталія Бабич" />
@@ -17,19 +17,20 @@
 <link rel="icon" href="data:," />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="css/variables.css" />
-<link rel="stylesheet" href="css/base.css" />
-<link rel="stylesheet" href="css/header.css" />
-<link rel="stylesheet" href="css/hero.css" />
-<link rel="stylesheet" href="css/projects.css" />
-<link rel="stylesheet" href="css/services.css" />
-<link rel="stylesheet" href="css/process.css" />
-<link rel="stylesheet" href="css/about.css" />
-<link rel="stylesheet" href="css/skills.css" />
-<link rel="stylesheet" href="css/footer.css" />
-<link rel="stylesheet" href="css/contact-modal.css" />
+<link rel="stylesheet" href="css/variables.css?v=42" />
+<link rel="stylesheet" href="css/base.css?v=42" />
+<link rel="stylesheet" href="css/header.css?v=42" />
+<link rel="stylesheet" href="css/hero.css?v=42" />
+<link rel="stylesheet" href="css/projects.css?v=42" />
+<link rel="stylesheet" href="css/services.css?v=42" />
+<link rel="stylesheet" href="css/process.css?v=42" />
+<link rel="stylesheet" href="css/about.css?v=42" />
+<link rel="stylesheet" href="css/skills.css?v=42" />
+<link rel="stylesheet" href="css/footer.css?v=42" />
+<link rel="stylesheet" href="css/contact-modal.css?v=42" />
 
 <script>
 window.PAGE_I18N = {
@@ -57,21 +58,42 @@ window.PAGE_I18N = {
 
   "service.landing.name": { uk: "Лендінг", en: "Landing page" },
   "service.landing.for": { uk: "Для спеціалістів з однією пропозицією", en: "For specialists with a single offer" },
-  "service.landing.f1": { uk: "До 5 секцій", en: "Up to 5 sections" },
-  "service.landing.f2": { uk: "Адаптив під усі екрани", en: "Fully responsive" },
-  "service.landing.f3": { uk: "1 раунд правок", en: "1 revision round" },
+  "service.landing.f1": { uk: "<strong>Сторінки:</strong> 1, до 5 секцій<span class=\"m-extra\"> (Hero, Про/Послуги, Переваги, Соціальний доказ, Контакти/CTA)</span>", en: "<strong>Pages:</strong> 1, up to 5 sections<span class=\"m-extra\"> (Hero, About/Services, Benefits, Social proof, Contact/CTA)</span>" },
+  "service.landing.d": { uk: "<strong>Дизайн:</strong> індивідуальна структура на основі референсів", en: "<strong>Design:</strong> custom structure based on references" },
+  "service.landing.f2": { uk: "<strong>Frontend:</strong> власний код, без конструкторів", en: "<strong>Frontend:</strong> custom code, no site builders" },
+  "service.landing.f3": { uk: "<strong>Адаптив:</strong> десктоп / планшет / мобільний", en: "<strong>Responsive:</strong> desktop / tablet / mobile" },
+  "service.landing.f4": { uk: "<strong>SEO:</strong> базове<span class=\"m-extra\">: семантична розмітка, title/meta description, Open Graph, alt-атрибути, базова оптимізація швидкодії</span>", en: "<strong>SEO:</strong> basic<span class=\"m-extra\">: semantic markup, title/meta description, Open Graph, alt attributes, basic performance optimisation</span>" },
+  "service.landing.f5": { uk: "<strong>Форми:</strong> 1 форма або CTA-кнопка<span class=\"m-extra\"> (Telegram/Instagram/WhatsApp)</span>", en: "<strong>Forms:</strong> 1 form or CTA button<span class=\"m-extra\"> (Telegram/Instagram/WhatsApp)</span>" },
+  "service.landing.a": { uk: "<strong>Анімації:</strong> базові, поява блоків при скролі", en: "<strong>Animations:</strong> basic, blocks appear on scroll" },
+  "service.landing.f6": { uk: "<strong>Правки:</strong> 1 раунд<span class=\"m-extra\"> у межах узгодженого ТЗ</span>", en: "<strong>Revisions:</strong> 1 round<span class=\"m-extra\"> within the agreed scope</span>" },
+  "service.landing.f7": { uk: "<strong>Деплой:</strong> хостинг замовника + підключення домену", en: "<strong>Deployment:</strong> client&rsquo;s hosting + domain connection" },
+  "service.landing.f8": { uk: "<strong>Термін:</strong> 5&ndash;7 робочих днів<span class=\"m-extra\"> (за вчасного контенту)</span>", en: "<strong>Timeline:</strong> 5&ndash;7 working days<span class=\"m-extra\"> (if content is provided on time)</span>" },
 
   "service.business.name": { uk: "Сайт для малого бізнесу", en: "Small business website" },
-  "service.business.for": { uk: "Для майстрів, кафе, локального бізнесу", en: "For studios, cafés and local businesses" },
-  "service.business.f1": { uk: "2–3 сторінки", en: "2–3 pages" },
-  "service.business.f2": { uk: "Форма + інтеграція", en: "Form + integration" },
-  "service.business.f3": { uk: "1–2 раунди правок", en: "1–2 revision rounds" },
+  "service.business.for": { uk: "Для майстрів, кафе, локального бізнесу", en: "For studios, caf&eacute;s and local businesses" },
+  "service.business.f1": { uk: "<strong>Сторінки:</strong> 2&ndash;3, &asymp; 8&ndash;10 секцій<span class=\"m-extra\"> (напр. Головна, Послуги, Контакти)</span>", en: "<strong>Pages:</strong> 2&ndash;3, &asymp; 8&ndash;10 sections<span class=\"m-extra\"> (e.g. Home, Services, Contact)</span>" },
+  "service.business.d": { uk: "<strong>Дизайн:</strong> індивідуальна структура + навігація", en: "<strong>Design:</strong> custom structure + navigation" },
+  "service.business.f2": { uk: "<strong>Frontend:</strong> власний код", en: "<strong>Frontend:</strong> custom code" },
+  "service.business.f3": { uk: "<strong>Адаптив:</strong> десктоп / планшет / мобільний", en: "<strong>Responsive:</strong> desktop / tablet / mobile" },
+  "service.business.f4": { uk: "<strong>SEO:</strong> базове на всіх сторінках", en: "<strong>SEO:</strong> basic, on every page" },
+  "service.business.f5": { uk: "<strong>Форми:</strong> 1 форма + 1 інтеграція<span class=\"m-extra\"> (Telegram/соцмережі)</span>", en: "<strong>Forms:</strong> 1 form + 1 integration<span class=\"m-extra\"> (Telegram/social networks)</span>" },
+  "service.business.a": { uk: "<strong>Анімації:</strong> базові", en: "<strong>Animations:</strong> basic" },
+  "service.business.f6": { uk: "<strong>Правки:</strong> 1&ndash;2 раунди", en: "<strong>Revisions:</strong> 1&ndash;2 rounds" },
+  "service.business.f7": { uk: "<strong>Деплой:</strong> на хостинг замовника", en: "<strong>Deployment:</strong> client&rsquo;s hosting" },
+  "service.business.f8": { uk: "<strong>Термін:</strong> 8&ndash;12 робочих днів", en: "<strong>Timeline:</strong> 8&ndash;12 working days" },
 
   "service.multipage.name": { uk: "Багатосторінковий сайт", en: "Multi-page website" },
   "service.multipage.for": { uk: "Для бізнесу, що росте", en: "For a growing business" },
-  "service.multipage.f1": { uk: "4–6 сторінок", en: "4–6 pages" },
-  "service.multipage.f2": { uk: "Розширена структура", en: "Expanded structure" },
-  "service.multipage.f3": { uk: "2 раунди правок", en: "2 revision rounds" },
+  "service.multipage.f1": { uk: "<strong>Сторінки:</strong> 4&ndash;6, 15+ секцій", en: "<strong>Pages:</strong> 4&ndash;6, 15+ sections" },
+  "service.multipage.d": { uk: "<strong>Дизайн:</strong> повна структура сайту, узгоджена візуальна система", en: "<strong>Design:</strong> full site structure, a consistent visual system" },
+  "service.multipage.f2": { uk: "<strong>Frontend:</strong> власний код, компоненти<span class=\"m-extra\">, що перевикористовуються</span>", en: "<strong>Frontend:</strong> custom code, components<span class=\"m-extra\">, reusable</span>" },
+  "service.multipage.f3": { uk: "<strong>Адаптив:</strong> десктоп / планшет / мобільний", en: "<strong>Responsive:</strong> desktop / tablet / mobile" },
+  "service.multipage.f4": { uk: "<strong>SEO:</strong> базове + sitemap.xml + robots.txt", en: "<strong>SEO:</strong> basic + sitemap.xml + robots.txt" },
+  "service.multipage.f5": { uk: "<strong>Форми:</strong> до 2 форм/інтеграцій", en: "<strong>Forms:</strong> up to 2 forms/integrations" },
+  "service.multipage.a": { uk: "<strong>Анімації:</strong> базові + акцентні на ключових блоках", en: "<strong>Animations:</strong> basic + accent animations on key blocks" },
+  "service.multipage.f6": { uk: "<strong>Правки:</strong> 2 раунди", en: "<strong>Revisions:</strong> 2 rounds" },
+  "service.multipage.f7": { uk: "<strong>Деплой:</strong> на хостинг замовника", en: "<strong>Deployment:</strong> client&rsquo;s hosting" },
+  "service.multipage.f8": { uk: "<strong>Термін:</strong> 12&ndash;18 робочих днів", en: "<strong>Timeline:</strong> 12&ndash;18 working days" },
 
   "service.cta": { uk: "Написати", en: "Message me" },
   "service.priceFrom": { uk: "від", en: "from" },
@@ -175,7 +197,7 @@ window.PAGE_I18N = {
         <li><a class="header__nav-link" data-i18n="nav.services" href="#services">Послуги</a></li>
         <li><a class="header__nav-link" data-i18n="nav.process" href="#process">Процес</a></li>
         <li><a class="header__nav-link" data-i18n="nav.about" href="#about">Про мене</a></li>
-        <li><a class="header__nav-link" data-i18n="nav.skills" href="#skills">Навички</a></li>
+        <li><a class="header__nav-link" data-i18n="nav.skills" href="#skills">Можливості</a></li>
         <li><a class="header__nav-link" data-i18n="nav.contact" href="#contact">Контакти</a></li>
       </ul>
       <div class="header__actions">
@@ -195,48 +217,40 @@ window.PAGE_I18N = {
 <main id="top">
 
   <section class="hero" id="hero">
-    <div class="hero__photos">
-      <figure class="hero__photo-col">
-        <div class="hero__photo">
-          <img src="images/portfolio-photo1.jpeg" alt="Наталія Бабич, портрет" />
-        </div>
-        <figcaption class="hero__caption" data-i18n="hero.eyebrow">Frontend developer</figcaption>
-      </figure>
-      <figure class="hero__photo-col hero__photo-col--bleed">
-        <div class="hero__photo">
-          <img src="images/portfolio-photo2.jpeg" alt="Наталія Бабич" />
-        </div>
-        <figcaption class="hero__caption" data-i18n="hero.tagline">Створюю сайти з нуля: адаптивні, швидкі й сучасні.</figcaption>
-      </figure>
-    </div>
+    <img class="hero__image hero__image--wall" src="images/wall.jpg" alt="" />
+    <h1 class="hero__name" translate="no">NATALIE</h1>
+    <img class="hero__image hero__image--girl" src="images/girl1.png" alt="Наталія Бабич" />
+    <div class="hero__blur" aria-hidden="true"></div>
 
-    <div class="container hero__bottom">
-      <h1 class="hero__name">
-        <span data-i18n="hero.name.first">Бабич</span>
-        <span data-i18n="hero.name.second">Наталія</span>
-      </h1>
+    <div class="hero__content">
+      <div class="hero__meta">
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Frontend developer</p>
+        <p class="hero__tagline" data-i18n="hero.tagline">Створюю сайти з нуля: адаптивні, швидкі й сучасні.</p>
+      </div>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="#projects" data-i18n="hero.cta.projects">Переглянути проєкти</a>
-        <a class="btn btn--ghost" href="#contact" data-i18n="hero.cta.contact">Зв&rsquo;язатися</a>
+        <a class="hero__btn" href="#projects" data-i18n="hero.cta.projects">Переглянути проєкти</a>
+        <a class="hero__btn" href="#contact" data-i18n="hero.cta.contact">Зв&rsquo;язатися</a>
       </div>
     </div>
   </section>
 
   <section class="section projects" id="projects">
-    <div class="container projects__head">
+    <div class="container">
       <h2 class="section-title" data-i18n="projects.title">РОБОТИ</h2>
-      <p class="projects__head-info" data-i18n="projects.info">Реальні сайти для реального бізнесу: від ідеї до запуску.</p>
     </div>
 
     <div class="projects__row">
-      <div class="projects__info" aria-hidden="true"></div>
+      <div class="projects__info">
+        <p class="projects__info-text" data-i18n="projects.info">Реальні сайти для реального бізнесу: від ідеї до запуску.</p>
+      </div>
 
+      <div class="projects__track-wrap">
       <div class="projects__track hide-scrollbar">
 
         <a class="project-card" href="project/tennis-court-reservation.html">
           <div class="project-card__frame">
             <span class="project-card__num">01</span>
-            <img src="projects/tennis-reservation/image-t1.png" alt="превʼю проєкту Tennis Court Reservation" loading="lazy" />
+            <img src="images/tennis-img.png" alt="превʼю проєкту Tennis Court Reservation" loading="lazy" />
           </div>
           <div class="project-card__body">
             <h3 class="project-card__name">Tennis Court Reservation</h3>
@@ -250,7 +264,7 @@ window.PAGE_I18N = {
         <a class="project-card" href="project/chelona.html">
           <div class="project-card__frame">
             <span class="project-card__num">02</span>
-            <img src="projects/Chelona/image-c1.jpg" alt="превʼю проєкту Chelóna" loading="lazy" />
+            <img src="images/chelona-img.png" alt="превʼю проєкту Chelóna" loading="lazy" />
           </div>
           <div class="project-card__body">
             <h3 class="project-card__name">Chel&oacute;na</h3>
@@ -264,7 +278,7 @@ window.PAGE_I18N = {
         <a class="project-card" href="project/skia.html">
           <div class="project-card__frame">
             <span class="project-card__num">03</span>
-            <img src="projects/Skia/image-s1.jpg" alt="превʼю проєкту SKIA" loading="lazy" />
+            <img src="images/menu-img.png" alt="превʼю проєкту SKIA" loading="lazy" />
           </div>
           <div class="project-card__body">
             <h3 class="project-card__name">SKIA</h3>
@@ -278,7 +292,7 @@ window.PAGE_I18N = {
         <a class="project-card" href="project/vivienne-beaumont.html">
           <div class="project-card__frame">
             <span class="project-card__num">04</span>
-            <img src="projects/Vivienne%20Beaumont/image-v1.jpg" alt="превʼю проєкту Vivienne Beaumont" loading="lazy" />
+            <img src="images/vivienne-img.png" alt="превʼю проєкту Vivienne Beaumont" loading="lazy" />
           </div>
           <div class="project-card__body">
             <h3 class="project-card__name">Vivienne Beaumont</h3>
@@ -290,13 +304,16 @@ window.PAGE_I18N = {
         </a>
 
       </div>
+      <button type="button" class="projects__next" aria-label="Next projects">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      </div>
     </div>
   </section>
 
   <section class="section services" id="services">
     <div class="container">
-      <p class="section-tag" data-i18n="services.tag">Послуги</p>
-      <h2 class="section-title" data-i18n="services.title">Послуги та ціни</h2>
+      <h2 class="section-title services__title" data-i18n="services.title">Послуги та ціни</h2>
 
       <div class="services__grid" style="margin-top:40px;">
 
@@ -307,9 +324,16 @@ window.PAGE_I18N = {
             <p class="service-card__price">4 500 <span data-i18n="service.currency">грн</span></p>
           </div>
           <ul class="service-card__list">
-            <li data-i18n="service.landing.f1">До 5 секцій</li>
-            <li data-i18n="service.landing.f2">Адаптив під усі екрани</li>
-            <li data-i18n="service.landing.f3">1 раунд правок</li>
+            <li data-i18n="service.landing.f1"><strong>Сторінки:</strong> 1, до 5 секцій<span class="m-extra"> (Hero, Про/Послуги, Переваги, Соціальний доказ, Контакти/CTA)</span></li>
+            <li class="is-extra" data-i18n="service.landing.d"><strong>Дизайн:</strong> індивідуальна структура на основі референсів</li>
+            <li data-i18n="service.landing.f2"><strong>Frontend:</strong> власний код, без конструкторів</li>
+            <li data-i18n="service.landing.f3"><strong>Адаптив:</strong> десктоп / планшет / мобільний</li>
+            <li data-i18n="service.landing.f4"><strong>SEO:</strong> базове<span class="m-extra">: семантична розмітка, title/meta description, Open Graph, alt-атрибути, базова оптимізація швидкодії</span></li>
+            <li data-i18n="service.landing.f5"><strong>Форми:</strong> 1 форма або CTA-кнопка<span class="m-extra"> (Telegram/Instagram/WhatsApp)</span></li>
+            <li class="is-extra" data-i18n="service.landing.a"><strong>Анімації:</strong> базові, поява блоків при скролі</li>
+            <li data-i18n="service.landing.f6"><strong>Правки:</strong> 1 раунд<span class="m-extra"> у межах узгодженого ТЗ</span></li>
+            <li data-i18n="service.landing.f7"><strong>Деплой:</strong> хостинг замовника + підключення домену</li>
+            <li data-i18n="service.landing.f8"><strong>Термін:</strong> 5&ndash;7 робочих днів<span class="m-extra"> (за вчасного контенту)</span></li>
           </ul>
           <button type="button" class="service-card__cta js-contact-trigger">
             <span data-i18n="service.cta">Написати</span>
@@ -324,9 +348,16 @@ window.PAGE_I18N = {
             <p class="service-card__price">7 500 <span data-i18n="service.currency">грн</span></p>
           </div>
           <ul class="service-card__list">
-            <li data-i18n="service.business.f1">2&ndash;3 сторінки</li>
-            <li data-i18n="service.business.f2">Форма + інтеграція</li>
-            <li data-i18n="service.business.f3">1&ndash;2 раунди правок</li>
+            <li data-i18n="service.business.f1"><strong>Сторінки:</strong> 2&ndash;3, &asymp; 8&ndash;10 секцій<span class="m-extra"> (напр. Головна, Послуги, Контакти)</span></li>
+            <li class="is-extra" data-i18n="service.business.d"><strong>Дизайн:</strong> індивідуальна структура + навігація</li>
+            <li data-i18n="service.business.f2"><strong>Frontend:</strong> власний код</li>
+            <li data-i18n="service.business.f3"><strong>Адаптив:</strong> десктоп / планшет / мобільний</li>
+            <li data-i18n="service.business.f4"><strong>SEO:</strong> базове на всіх сторінках</li>
+            <li data-i18n="service.business.f5"><strong>Форми:</strong> 1 форма + 1 інтеграція<span class="m-extra"> (Telegram/соцмережі)</span></li>
+            <li class="is-extra" data-i18n="service.business.a"><strong>Анімації:</strong> базові</li>
+            <li data-i18n="service.business.f6"><strong>Правки:</strong> 1&ndash;2 раунди</li>
+            <li data-i18n="service.business.f7"><strong>Деплой:</strong> на хостинг замовника</li>
+            <li data-i18n="service.business.f8"><strong>Термін:</strong> 8&ndash;12 робочих днів</li>
           </ul>
           <button type="button" class="service-card__cta js-contact-trigger">
             <span data-i18n="service.cta">Написати</span>
@@ -341,9 +372,16 @@ window.PAGE_I18N = {
             <p class="service-card__price">11 500 <span data-i18n="service.currency">грн</span></p>
           </div>
           <ul class="service-card__list">
-            <li data-i18n="service.multipage.f1">4&ndash;6 сторінок</li>
-            <li data-i18n="service.multipage.f2">Розширена структура</li>
-            <li data-i18n="service.multipage.f3">2 раунди правок</li>
+            <li data-i18n="service.multipage.f1"><strong>Сторінки:</strong> 4&ndash;6, 15+ секцій</li>
+            <li class="is-extra" data-i18n="service.multipage.d"><strong>Дизайн:</strong> повна структура сайту, узгоджена візуальна система</li>
+            <li data-i18n="service.multipage.f2"><strong>Frontend:</strong> власний код, компоненти<span class="m-extra">, що перевикористовуються</span></li>
+            <li data-i18n="service.multipage.f3"><strong>Адаптив:</strong> десктоп / планшет / мобільний</li>
+            <li data-i18n="service.multipage.f4"><strong>SEO:</strong> базове + sitemap.xml + robots.txt</li>
+            <li data-i18n="service.multipage.f5"><strong>Форми:</strong> до 2 форм/інтеграцій</li>
+            <li class="is-extra" data-i18n="service.multipage.a"><strong>Анімації:</strong> базові + акцентні на ключових блоках</li>
+            <li data-i18n="service.multipage.f6"><strong>Правки:</strong> 2 раунди</li>
+            <li data-i18n="service.multipage.f7"><strong>Деплой:</strong> на хостинг замовника</li>
+            <li data-i18n="service.multipage.f8"><strong>Термін:</strong> 12&ndash;18 робочих днів</li>
           </ul>
           <button type="button" class="service-card__cta js-contact-trigger">
             <span data-i18n="service.cta">Написати</span>
@@ -536,8 +574,9 @@ window.PAGE_I18N = {
 
 <footer class="footer" id="contact">
   <div class="footer__grid">
+    <h2 class="footer__heading" data-i18n="footer.heading">Контакти</h2>
+
     <div class="footer__intro">
-      <h2 class="footer__heading" data-i18n="footer.heading">Контакти</h2>
       <p class="footer__lead" data-i18n="footer.lead">Маєте ідею для сайту? Напишіть, і обговоримо деталі.</p>
       <p class="footer__closing" data-i18n="footer.closing">Створімо щось разом</p>
     </div>
@@ -562,7 +601,7 @@ window.PAGE_I18N = {
         </div>
         <div class="footer__link-row footer__link-row--last">
           <span class="footer__link-label" data-i18n="footer.label.availability">Доступність</span>
-          <span class="footer__link-value footer__link-value--static footer__link-value--small" data-i18n="footer.availability">На зв&rsquo;язку 24/7 з понеділка по суботу. У неділю не працюю.</span>
+          <span class="footer__link-value footer__link-value--static footer__link-value--small" data-i18n="footer.availability">На зв&rsquo;язку 24/7 з понеділка по суботу</span>
         </div>
       </div>
 
@@ -606,8 +645,8 @@ window.PAGE_I18N = {
 </div>
 
 <script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
-<script src="js/process.js"></script>
-<script src="js/contact-modal.js"></script>
+<script src="js/main.js?v=42"></script>
+<script src="js/process.js?v=42"></script>
+<script src="js/contact-modal.js?v=42"></script>
 </body>
 </html>
