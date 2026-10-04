@@ -97,7 +97,9 @@
   position: absolute;
   z-index: 0;
   font-family: "Tenor Sans", var(--font-base);
-  left: var(--gutter);
+  left: 0;
+  right: 0;
+  text-align: center;
   top: calc(var(--head-y) - 0.74 * var(--name-size) - var(--up));
   font-size: var(--name-size);
   font-weight: 400;
