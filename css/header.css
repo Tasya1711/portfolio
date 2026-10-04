@@ -22,9 +22,28 @@
 }
 
 .header__logo {
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  --lw: 46px;
+  display: block;
+  position: relative;
+  width: var(--lw);
+  height: calc(var(--lw) * 0.696);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.header__logo img {
+  position: absolute;
+  max-width: none;
+  width: calc(var(--lw) / 0.336);
+  left: calc(var(--lw) / 0.336 * -0.332);
+  top: calc(var(--lw) / 0.336 * -0.366);
+  filter: brightness(0);
+}
+
+@media (max-width: 640px) {
+  .header__logo {
+    --lw: 38px;
+  }
 }
 
 .header__nav {
