@@ -16,22 +16,23 @@
 
 <link rel="icon" type="image/png" href="images/logo.png" />
 <link rel="apple-touch-icon" href="images/logo.png" />
+<link rel="preload" as="image" href="images/girl1.webp" fetchpriority="high" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="css/variables.css?v=50" />
-<link rel="stylesheet" href="css/base.css?v=50" />
-<link rel="stylesheet" href="css/header.css?v=50" />
-<link rel="stylesheet" href="css/hero.css?v=50" />
-<link rel="stylesheet" href="css/projects.css?v=50" />
-<link rel="stylesheet" href="css/services.css?v=50" />
-<link rel="stylesheet" href="css/process.css?v=50" />
-<link rel="stylesheet" href="css/about.css?v=50" />
-<link rel="stylesheet" href="css/skills.css?v=50" />
-<link rel="stylesheet" href="css/footer.css?v=50" />
-<link rel="stylesheet" href="css/contact-modal.css?v=50" />
+<link rel="stylesheet" href="css/variables.css?v=51" />
+<link rel="stylesheet" href="css/base.css?v=51" />
+<link rel="stylesheet" href="css/header.css?v=51" />
+<link rel="stylesheet" href="css/hero.css?v=51" />
+<link rel="stylesheet" href="css/projects.css?v=51" />
+<link rel="stylesheet" href="css/services.css?v=51" />
+<link rel="stylesheet" href="css/process.css?v=51" />
+<link rel="stylesheet" href="css/about.css?v=51" />
+<link rel="stylesheet" href="css/skills.css?v=51" />
+<link rel="stylesheet" href="css/footer.css?v=51" />
+<link rel="stylesheet" href="css/contact-modal.css?v=51" />
 
 <script>
 window.PAGE_I18N = {
@@ -215,9 +216,9 @@ window.PAGE_I18N = {
 <main id="top">
 
   <section class="hero" id="hero">
-    <img class="hero__image hero__image--wall" src="images/wall.jpg" alt="" />
+    <img class="hero__image hero__image--wall" src="images/wall.jpg" alt="" fetchpriority="high" decoding="async" />
     <h1 class="hero__name" translate="no">NATALIE</h1>
-    <img class="hero__image hero__image--girl" src="images/girl1.png" alt="Наталія Бабич" />
+    <img class="hero__image hero__image--girl" src="images/girl1.webp" alt="Наталія Бабич" fetchpriority="high" decoding="async" />
     <div class="hero__blur" aria-hidden="true"></div>
 
     <div class="hero__content">
@@ -248,7 +249,7 @@ window.PAGE_I18N = {
         <a class="project-card" href="project/tennis-court-reservation.html">
           <div class="project-card__frame">
             <span class="project-card__num">01</span>
-            <img src="images/tennis-img.png" alt="превʼю проєкту Tennis Court Reservation" loading="lazy" />
+            <img src="images/tennis-img.webp" alt="превʼю проєкту Tennis Court Reservation" loading="lazy" />
           </div>
           <div class="project-card__body">
             <h3 class="project-card__name">Tennis Court Reservation</h3>
@@ -262,7 +263,7 @@ window.PAGE_I18N = {
         <a class="project-card" href="project/chelona.html">
           <div class="project-card__frame">
             <span class="project-card__num">02</span>
-            <img src="images/chelona-img.png" alt="превʼю проєкту Chelóna" loading="lazy" />
+            <img src="images/chelona-img.webp" alt="превʼю проєкту Chelóna" loading="lazy" />
           </div>
           <div class="project-card__body">
             <h3 class="project-card__name">Chel&oacute;na</h3>
@@ -276,7 +277,7 @@ window.PAGE_I18N = {
         <a class="project-card" href="project/skia.html">
           <div class="project-card__frame">
             <span class="project-card__num">03</span>
-            <img src="images/menu-img.png" alt="превʼю проєкту SKIA" loading="lazy" />
+            <img src="images/menu-img.webp" alt="превʼю проєкту SKIA" loading="lazy" />
           </div>
           <div class="project-card__body">
             <h3 class="project-card__name">SKIA</h3>
@@ -290,7 +291,7 @@ window.PAGE_I18N = {
         <a class="project-card" href="project/vivienne-beaumont.html">
           <div class="project-card__frame">
             <span class="project-card__num">04</span>
-            <img src="images/vivienne-img.png" alt="превʼю проєкту Vivienne Beaumont" loading="lazy" />
+            <img src="images/vivienne-img.webp" alt="превʼю проєкту Vivienne Beaumont" loading="lazy" />
           </div>
           <div class="project-card__body">
             <h3 class="project-card__name">Vivienne Beaumont</h3>
@@ -507,7 +508,7 @@ window.PAGE_I18N = {
   <section class="about" id="about">
     <div class="container about__inner">
       <div class="about__photo">
-        <img src="images/about-me-photo.jpeg" alt="Наталія Бабич" />
+        <img src="images/about-me-photo.jpeg" alt="Наталія Бабич" loading="lazy" decoding="async" />
       </div>
       <div>
         <p class="section-tag" data-i18n="about.tag">Про мене</p>
@@ -606,7 +607,7 @@ window.PAGE_I18N = {
     </div>
 
     <div class="footer__image">
-      <img src="images/7-img-right.png" alt="" />
+      <img src="images/7-img-right.webp" alt="" loading="lazy" decoding="async" />
     </div>
   </div>
 </footer>
@@ -640,8 +641,8 @@ window.PAGE_I18N = {
 </div>
 
 <script src="js/i18n.js"></script>
-<script src="js/main.js?v=50"></script>
-<script src="js/process.js?v=50"></script>
-<script src="js/contact-modal.js?v=50"></script>
+<script src="js/main.js?v=51"></script>
+<script src="js/process.js?v=51"></script>
+<script src="js/contact-modal.js?v=51"></script>
 </body>
 </html>
