@@ -8,6 +8,28 @@
 
   if (!stage || !frame) return;
 
+  var iframe = frame.querySelector("iframe");
+
+  function scrollbarWidth() {
+    var probe = document.createElement("iframe");
+    probe.setAttribute("aria-hidden", "true");
+    probe.style.cssText = "position:absolute;top:-9999px;left:-9999px;width:120px;height:120px;border:0;visibility:hidden";
+    document.body.appendChild(probe);
+    var w = 0;
+    try {
+      var doc = probe.contentDocument;
+      doc.open();
+      doc.write('<!doctype html><body style="margin:0"><div id="p" style="width:100px;height:100px;overflow:scroll"></div>');
+      doc.close();
+      var el = doc.getElementById("p");
+      w = el.offsetWidth - el.clientWidth;
+    } catch (e) {}
+    document.body.removeChild(probe);
+    return w;
+  }
+
+  var sbw = scrollbarWidth();
+
   function layout() {
     var device = frame.getAttribute("data-device");
     var naturalWidth = NATURAL_WIDTH[device];
@@ -26,6 +48,11 @@
     var scale = Math.min(1, availableWidth / naturalWidth);
 
     frame.style.width = naturalWidth + "px";
+    if (iframe && sbw > 0) {
+      iframe.style.width = naturalWidth + sbw + "px";
+      iframe.style.minWidth = "0";
+    }
+    if (sbw > 0) frame.style.overflow = "hidden";
     if (device === "mobile") {
       scale = Math.min(scale, availableHeight / MOBILE_HEIGHT);
     }
