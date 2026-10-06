@@ -38,7 +38,10 @@
     }
 
     var stagePadding = 56;
-    var availableWidth = stage.clientWidth - stagePadding;
+    var phoneMobile = device === "mobile" && window.innerWidth <= 640;
+    stage.style.paddingLeft = phoneMobile ? "0" : "";
+    stage.style.paddingRight = phoneMobile ? "0" : "";
+    var availableWidth = stage.clientWidth - (phoneMobile ? 0 : stagePadding);
 
     if (window.matchMedia("(max-width: 900px)").matches) {
       var natH = device === "desktop" ? naturalWidth / 1.72 : device === "tablet" ? 1112 : MOBILE_HEIGHT;
@@ -70,7 +73,7 @@
     }
     frame.style.height = height + "px";
     frame.style.marginTop = top + "px";
-    frame.style.transform = "scale(" + scale + ")";
+    frame.style.transform = scale === 1 ? "none" : "scale(" + scale + ")";
     frame.style.marginLeft = Math.max(0, (availableWidth - naturalWidth * scale) / 2) + "px";
   }
 
