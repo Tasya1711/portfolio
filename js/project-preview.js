@@ -33,6 +33,9 @@
   function layout() {
     var device = frame.getAttribute("data-device");
     var naturalWidth = NATURAL_WIDTH[device];
+    if (device === "mobile" && window.innerWidth <= 640) {
+      naturalWidth = Math.min(480, Math.max(320, window.innerWidth));
+    }
 
     var stagePadding = 56;
     var availableWidth = stage.clientWidth - stagePadding;
