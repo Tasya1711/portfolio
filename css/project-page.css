@@ -207,3 +207,14 @@
     max-width: none;
   }
 }
+
+@media (max-width: 360px) {
+  .device-switch {
+    gap: 2px;
+  }
+
+  .device-switch__btn {
+    padding: 8px 7px;
+    gap: 3px;
+  }
+}

@@ -5,6 +5,20 @@
   var NATURAL_WIDTH = { desktop: 1440, tablet: 834, mobile: 390 };
 
   var MOBILE_HEIGHT = 844;
+  var phoneH = 0;
+  var phoneHW = 0;
+
+  // On a phone the Mobile preview is as tall as the visible screen (minus the
+  // header and a strip of page), so the page can still be scrolled past it.
+  // It is computed once per width so the iOS address bar does not cause jumps.
+  function mobileHeight() {
+    if (window.innerWidth > 640) return MOBILE_HEIGHT;
+    if (phoneHW !== window.innerWidth) {
+      phoneHW = window.innerWidth;
+      phoneH = Math.max(480, Math.min(932, window.innerHeight - 112));
+    }
+    return phoneH;
+  }
 
   if (!stage || !frame) return;
 
@@ -44,7 +58,7 @@
     var availableWidth = stage.clientWidth - (phoneMobile ? 0 : stagePadding);
 
     if (window.matchMedia("(max-width: 900px)").matches) {
-      var natH = device === "desktop" ? naturalWidth / 1.72 : device === "tablet" ? 1112 : MOBILE_HEIGHT;
+      var natH = device === "desktop" ? naturalWidth / 1.72 : device === "tablet" ? 1112 : mobileHeight();
       var fit = Math.min(1, availableWidth / naturalWidth);
       stage.style.height = Math.round(natH * fit + stagePadding) + "px";
     } else {
@@ -60,12 +74,12 @@
     }
     if (sbw > 0) frame.style.overflow = "hidden";
     if (device === "mobile") {
-      scale = Math.min(scale, availableHeight / MOBILE_HEIGHT);
+      scale = Math.min(scale, availableHeight / mobileHeight());
     }
     var height = availableHeight / scale;
     var top = 0;
     if (device === "mobile") {
-      height = MOBILE_HEIGHT;
+      height = mobileHeight();
       top = Math.max(0, (availableHeight - height * scale) / 2);
     } else if (device === "desktop") {
       height = Math.min(height, naturalWidth / 1.72);
